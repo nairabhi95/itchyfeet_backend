@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* Framework Shankar 0.0 main stylesheet */
+
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+*{
+      box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   Fonts Used
+----------------------------------------- */
+
+*{
+      font-family: 'Montserrat', sans-serif;
+}
+
+.sectionBox h3{
+      /*text-transform: uppercase;*/
+      margin: 0;
+}
+
+
+
+
+/* -----------------------------------------
+   Header
+----------------------------------------- */
+header{
+      position: fixed;
+      /*background: rgba(0,0,0,0.5);*/
+      z-index: 200;
+      width: 100%;
+
+}
+
+.logo{
+      margin:0;
+      padding: 20px 30px;
+}
+
+.logo a{
+      display: block;
+      text-indent: -9999%;
+      background: url("../images/itchylogo.png") top center no-repeat;
+      background-size: cover;
+      height: 40px;
+      width: 60px;
+}
+
+.navButton{
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      display: none;
+}
+
+.navButton .hi{
+      display: block;
+      background: white;
+      height: 120px;
+      width: 120px;
+      transform: translateX(50);
+      transform: rotate(45deg);
+}
+
+
+
+
+
+/* -----------------------------------------
+   Landing Section
+----------------------------------------- */
+/*.main{
+      display: block;
+      width: 100%;
+      position: fixed;
+}*/
+.main{
+      overflow: hidden;
+      position: relative;
+}
+
+
+.sectionBox{
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+}
+
+.landing2, .destination, .moment, .memory{
+      top: 100vh;
+}
+
+.map{
+      top:0;
+      left:-100vw;
+}
+
+.landing {
+      z-index: 5;
+}
+
+.landing2 {
+      z-index: 6;
+}
+
+.destination {
+      z-index: 7;
+}
+
+.map {
+      z-index: 8
+}
+
+.moment {
+      z-index: 9;
+}
+
+.memory {
+      z-index: 10;
+}
+
+.landing, .landing2{
+      height: 100vh;
+}
+
+.landing h3, .landing2 h3, .destination h3, .map h3,.moment h3, .memory h3{
+      color: white;
+      font-size: 4em;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 100;
+}
+
+
+.map h3{
+      color: dodgerblue;
+}
+
+.moment h3{
+      color: rgba(0,0,0,0.7);
+}
+
+#landing.change h3 {
+      color: green;
+}
+
+.imgBox{
+      display: block;
+      width: 100%;
+      height: 100vh;
+}
+
+
+.landingImg{
+      background: url("../images/f1.jpg") top center no-repeat;
+      background-size: cover;
+}
+
+.destinationImg {
+      background: url("../images/f2.jpg") bottom center no-repeat;
+      background-size: cover;
+}
+
+.mapImg{
+      background: url("../images/f2.1.jpg") bottom center no-repeat;
+      background-size: cover;
+}
+
+.momentImg {
+      background: url("../images/f3.jpeg") center center no-repeat;
+      background-size: cover;
+}
+
+.memoryImg{
+      background: url("../images/f4.jpg") bottom center no-repeat;
+      background-size: cover;
+}
+
+
+
+/* -----------------------------------------
+   Main
+----------------------------------------- */
+
+.main{
+      width: 100%;
+
+}
+
+
+/* -----------------------------------------
+   Landing
+----------------------------------------- */
+
+
+
+
+
+
+
+
+/* -----------------------------------------
+   Trigger
+----------------------------------------- */
+
+.triggerContainer{
+      display: block
+      position: absolute;
+      top: 75;
+      left: 0;
+      z-index: 100;
+      opacity: 0;
+}
+
+
+.trigger, .trigger1{
+      display: block;
+      width: 100px;
+      border: 3px solid pink;
+      z-index: 100;
+}
+
+.trigger1{
+      height: 75vh;
+}
+
+.trigger{
+      height: 25vh;
+}
+
+
+
+
+
+
+/* -----------------------------------------
+ svg viewFinder
+----------------------------------------- */
+
+.viewFinderContainer{
+      position: fixed;
+      z-index: 120;
+
+
+}
+
+svg#viewFinder{
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: 550px;
+      width: 320px;
+}
+
+
+
+
+
+
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+
+.footer{
+      display: block;
+      position: fixed;
+      top: 100vh;
+      height: 100vh;
+      width: 100%;
+      background: dodgerblue;      
+      z-index: 11;
+}
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
+/* -----------------------------------------
+   Media Queries
+----------------------------------------- */
+
+@media only screen and (min-width: 700px) {
+
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+}

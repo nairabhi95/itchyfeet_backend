@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+        
+        <context:annotation-config/>
+        
+        <!-- For mail settings and future properties files -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/hibernate/datasource.properties</value>
+				<!-- <value>classpath:mail.properties</value>
+				<value>classpath:application.properties</value>
+				<value>classpath:sqsqueue.properties</value>
+				<value>classpath:client.properties</value> -->
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">		
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="defaultAutoCommit" value="false" />
+		<property name="initialSize" value="${jdbc.pool.init.size}" />
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="SELECT 1" />
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties" ref="hibernateProps" />
+		<property name="configLocation" value="classpath:/hibernate/hibernate.cfg.xml" />
+	</bean>
+
+	<bean id="hibernateProps"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>				
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<!-- <prop key="org.hibernate.envers.audit_table_prefix">audit_</prop>
+				<prop key="org.hibernate.envers.audit_table_suffix"></prop>
+				<prop key="org.hibernate.envers.track_entities_changed_in_revision">false</prop>
+				<prop key="org.hibernate.envers.audit_strategy_validity_store_revend_timestamp">true</prop>
+				<prop key="org.hibernate.envers.revision_field_name">revision</prop>
+				<prop key="org.hibernate.envers.audit_strategy_validity_end_rev_field_name">revision_end</prop>
+				<prop key="org.hibernate.envers.revision_type_field_name">revision_type</prop>
+				<prop key="org.hibernate.envers.audit_strategy_validity_revend_timestamp_field_name">revision_end_timestamp</prop>
+				<prop key="org.hibernate.envers.modified_flag_suffix">_mod</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">		
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+        
+    </beans>

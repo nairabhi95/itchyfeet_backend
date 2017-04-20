@@ -1,0 +1,147 @@
+<!doctype html>
+
+<!-- modernizr will replace class of "no-js" with "js" if javascript is enabled in browser. Style for "no-js" and then progressively enhance -->
+<html class=“no-js”  lang="en">
+<head>
+<meta charset="utf-8">
+<title>Itchy Feet</title>
+<!--put here normalize . css to make styling of all browsers neutral, use latest version -->
+<link rel="stylesheet" href="uiResources/css/normalize.css" />
+<!--Skeleton stylesheet here use latest version-->
+<!-- <link rel="stylesheet" href="_css/skeleton.css" /> -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,800,900" rel="stylesheet">
+
+
+<!--write your custom css here in main . css-->
+<link rel="stylesheet" href="uiResources/css/main.css" />
+<!-- Add one page scroll style -->
+<!-- <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'> -->
+<!--Add link to modernizer latest version and (IMPORTANT) they have to follow stylesheet reference-->
+<script src="uiResources/scripts/public/modernizr.js"></script>
+
+
+<!-- Add link to jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-3.1.1.min.js"><\/script>')</script>
+
+<!-- add one page scroll jquery plugin -->
+<!-- <script type="text/javascript" src="scripts/jquery.onepage-scroll.js"></script> -->
+
+
+
+
+</head>
+
+<body>
+
+      <header>
+            <h1 class="logo"><a href="#">Itchyfeet</a></h1>
+            <div class="navButton">
+                  <div class="hi"></div>
+            </div>
+      </header>
+
+
+      <div class="main">
+            <section class="sectionBox landing" id="landing">
+                  <h3>Hey there!</h3>
+                  <div class="imgBox landingImg"></div>
+            </section>
+
+            <section class="sectionBox landing2">
+                  <h3>Landing two</h3>
+            </section>
+
+            <section class="sectionBox destination">
+                  <h3>Are we there yet?</h3>
+                  <div class="imgBox destinationImg"></div>
+            </section>
+
+            <section class="sectionBox map">
+                  <h3>We are here.</h3>
+                  <div class="imgBox mapImg"></div>
+            </section>
+
+            <section class="sectionBox moment">
+                  <h3>Say cheese :)</h3>
+                  <div class="imgBox momentImg"></div>
+            </section>
+
+            <section class="sectionBox memory">
+                  <h3>Do you remember?</h3>
+                  <div class="imgBox memoryImg"></div>
+            </section>
+      </div>
+
+      <footer class="footer">
+
+      </footer>
+
+
+
+
+      <div class="triggerContainer">
+            <div class="trigger1"></div>
+            <div class="trigger trigger2"></div>
+            <div class="trigger trigger3"></div>
+            <div class="trigger trigger4"></div>
+            <div class="trigger trigger5"></div>
+            <div class="trigger trigger6"></div>
+            <div class="trigger trigger7"></div>
+            <div class="trigger trigger8"></div>
+            <div class="trigger trigger9"></div>
+            <div class="trigger trigger10"></div>
+            <div class="trigger trigger11"></div>
+            <div class="trigger trigger12"></div>
+
+      </div>
+
+<!--
+      <div class="viewFinderContainer">
+
+
+            <svg version="1.1" id="viewFinder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px"
+            width="100px" height="100px"
+            viewBox="0 0 1366 638"
+            style="enable-background:new 0 0 1366 638;" xml:space="preserve">
+            <style type="text/css">
+            	.st0{fill:none;stroke:#000000;stroke-width:15;stroke-miterlimit:10;}
+            </style>
+            <rect x="533" y="59" class="st0" width="300" height="520"/>
+            </svg>
+
+
+
+      </div> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- add link to Greensock -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+
+
+<!-- Add link to ScrollMagic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<!-- Add link to ScrollMagic addIndicators -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<!-- Add link to ScrollMagic GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+
+<!-- Add link to main.js -->
+<script src="uiResources/scripts/private/main.js"></script>
+
+
+</body>
+</html>
